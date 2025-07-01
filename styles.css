@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #ccc;
+    background-color: #121821; /* Very dark blue-gray */
 }
 
 .container {
@@ -19,8 +19,8 @@ body {
 }
 
 header {
-    background-color: #1f2937; /* Dark slate */
-    color: white;
+    background-color: #0d1520; /* Darker navy */
+    color: #a0aec0; /* Cool light gray-blue */
     padding: 1rem 0;
 }
 
@@ -40,19 +40,19 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #a0aec0;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f97316; /* Orange */
+    color: #4299e1; /* Cool bright blue */
 }
 
 .hero {
-    background: linear-gradient(135deg, #f97316, #ef4444);
-    color: white;
+    background: linear-gradient(135deg, #1a2a6c, #274690); /* Deep blues gradient */
+    color: #e2e8f0; /* Light grayish blue */
     padding: 5rem 0;
     text-align: center;
 }
@@ -68,8 +68,8 @@ nav ul li a:hover {
 }
 
 .btn {
-    background-color: white;
-    color: #ef4444;
+    background-color: #4299e1; /* Bright cool blue */
+    color: white;
     padding: 0.75rem 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -79,27 +79,27 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #f97316;
+    background-color: #2b6cb0; /* Darker blue on hover */
     color: white;
 }
 
 .info-section {
-    background-color: white;
+    background-color: #1e293b; /* Dark slate blue */
     padding: 3rem 0;
     margin-top: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .info-section h3 {
     margin-bottom: 1rem;
-    color: #ef4444;
+    color: #4299e1; /* Bright blue accent */
 }
 
 .info-section p,
 .info-section ul {
     font-size: 1.1rem;
-    color: #555;
+    color: #cbd5e1; /* Light gray-blue */
 }
 
 .info-section ul {
@@ -118,14 +118,22 @@ input[type="text"],
 input[type="email"],
 textarea {
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #334155; /* Darker border */
     border-radius: 5px;
     font-size: 1rem;
+    background-color: #1e293b; /* match section bg */
+    color: #cbd5e1;
     resize: vertical;
 }
 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
 button[type="submit"] {
-    background-color: #ef4444;
+    background-color: #4299e1;
     color: white;
     padding: 0.75rem;
     border: none;
@@ -136,12 +144,12 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #f97316;
+    background-color: #2b6cb0;
 }
 
 footer {
-    background-color: #1f2937;
-    color: white;
+    background-color: #0d1520;
+    color: #7f9cf5;
     text-align: center;
     padding: 1rem 0;
     margin-top: 3rem;
@@ -150,19 +158,4 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav {
-        float: none;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    header h1 {
-        float: none;
-        text-align: center;
-    }
-}
+    na
