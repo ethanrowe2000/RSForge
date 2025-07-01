@@ -1,42 +1,95 @@
-/* Replace the .hero styles from your existing CSS with this: */
-
-.hero {
-    position: relative;
-    background: linear-gradient(135deg, #4b0101, #8b0000); /* Dark reds */
-    color: #f9f5f0; /* Off-white */
-    padding: 5rem 0;
-    text-align: center;
-    overflow: hidden;
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero h2, 
-.hero p, 
-.btn {
-    position: relative; /* to layer above the flame */
-    z-index: 2;
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  overflow: hidden;
+  position: relative;
 }
 
-.btn {
-    background-color: #e53e3e; /* Warm red */
+main {
+  position: relative;
+  z-index: 10;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.btn:hover {
-    background-color: #9b2c2c;
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ff5e00;
 }
 
-/* Flame animation container */
-.flame {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 120px;
-    pointer-events: none;
-    filter: drop-shadow(0 0 6px rgba(255, 69, 0, 0.7));
-    animation: flicker 1.5s infinite alternate;
-    z-index: 1;
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
-/* Flame shapes */
-.fla
+.contact-button {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: linear-gradient(45deg, #ff5e00, #ff8a00);
+  color: #121212;
+  font-weight: 700;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+  background: linear-gradient(45deg, #ff8a00, #ff5e00);
+  box-shadow: 0 6px 20px rgba(255, 138, 0, 0.9);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Fire background container */
+.fire-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at bottom, rgba(255, 94, 0, 0.6) 0%, transparent 80%),
+    radial-gradient(ellipse at bottom right, rgba(255, 138, 0, 0.4) 0%, transparent 90%);
+  animation: flicker 4s infinite alternate ease-in-out;
+  filter: blur(20px);
+}
+
+/* Subtle flickering animation to simulate flames */
+@keyframes flicker {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
