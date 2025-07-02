@@ -60,22 +60,39 @@
   </div>
 </section>
 
-<section id="contact" class="info-section">
-  <div class="container">
-    <h3>Contact Us</h3>
-    <p>Have questions about our services or want to discuss a project? Drop us a message and we'll get back to you promptly.</p>
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  window.formbutton = window.formbutton || function(){(formbutton.q = formbutton.q || []).push(arguments)};
+  formbutton("create", {
+    action: "https://formspree.io/f/xnnvwepq",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
 
-    <form action="https://formspree.io/f/xnnvwepq" method="POST">
-      <label for="email">Your Email:</label><br />
-      <input type="email" id="email" name="email" placeholder="you@example.com" required /><br /><br />
-
-      <label for="message">Your Message:</label><br />
-      <textarea id="message" name="message" placeholder="Let us know how we can help..." required></textarea><br /><br />
-
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</section>
   
 <!--
   <section id="contact" class="info-section">
