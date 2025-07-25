@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | RSForge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="RSForge Logo" class="logo-img" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="contact.html" class="visible">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 8rem;">
+    <section class="section-block">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="about-text" style="margin-bottom: 2rem;">
+        Have a question, need tech support, or want to start a service plan? Send us a message and we’ll be in touch as soon as possible.
+      </p>
+
+      <form action="https://formsubmit.co/f68c5aaa268315dbea219d2a7c44b9d0" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <input type="text" name="name" required placeholder="Name" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: #f0f0f0;" />
+        <input type="email" name="email" required placeholder="Email" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: #f0f0f0;" />
+        <textarea name="message" required rows="6" placeholder="Message" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: #f0f0f0;"></textarea>
+        <button type="submit" class="btn btn-accent" style="align-self: flex-start;">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 RSForge. All rights reserved.</p>
+  </footer>
+</body>
+</html>
