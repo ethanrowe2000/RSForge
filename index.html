@@ -3,115 +3,231 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RSForge - Innovative Tech Solutions</title>
+  <title>RSForge | Local IT Support in Kentuckiana</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="flame-background"></div>
-
-  <header>
+  <header class="navbar">
     <div class="container">
-      <h1>RSForge</h1>
+      <h1 class="logo animate">RSForge</h1>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services" class="animate">Services</a></li>
+          <li><a href="#about" class="animate">About</a></li>
+          <li><a href="contact.html" class="animate">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Forging the Future of Technology</h2>
-      <p>Your partner in innovative software and tech solutions.</p>
-      <a href="#contact" class="btn">Get In Touch</a>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero-title animate">Fast, Personal,<br>Affordable IT Services</h2>
+        <p class="hero-subtitle animate">
+          Helping Kentuckiana small businesses stay productive with reliable tech support.
+        </p>
+        <a href="contact.html" class="btn hero-btn animate">Contact Us</a>
+      </div>
+    </section>
 
-  <section id="about" class="info-section">
-    <div class="container">
-      <h3>About RSForge</h3>
-      <p>At RSForge, we specialize in crafting cutting-edge technology that drives businesses forward. From custom software development to tech consulting, our team is here to help you innovate and succeed.</p>
-    </div>
-  </section>
+    <section id="services" class="services section-block">
+      <div class="container">
+        <h2 class="section-title animate">Our Services</h2>
+        <div class="service-list">
+          <section class="service animate">
+            <button class="service-header" aria-expanded="false" aria-controls="desc-troubleshooting">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              Troubleshooting
+            </button>
+            <div id="desc-troubleshooting" class="service-desc" hidden>
+              <p>Quick fixes for computers, servers, printers, and more.</p>
+              <ul>
+                <li>Hardware diagnostics & repair</li>
+                <li>Software troubleshooting</li>
+                <li>Virus & malware removal</li>
+                <li>Printer & peripheral support</li>
+              </ul>
+            </div>
+          </section>
 
-  <section id="services" class="info-section">
-    <div class="container">
-      <h3>Our Services</h3>
-      <ul>
-        <li>Custom Software Development</li>
-        <li>Cloud Solutions</li>
-        <li>Technology Consulting</li>
-        <li>Data Analytics & AI</li>
-        <li>Endpoint Patching</li>
-      </ul>
-    </div>
-  </section>
+          <section class="service animate">
+            <button class="service-header" aria-expanded="false" aria-controls="desc-upgrades">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              System Upgrades
+            </button>
+            <div id="desc-upgrades" class="service-desc" hidden>
+              <p>Modernize computers, phones, and devices with the latest tech.</p>
+              <ul>
+                <li>Hardware upgrades & replacements</li>
+                <li>Operating system updates & migrations</li>
+                <li>Mobile device integration</li>
+                <li>Performance optimization</li>
+              </ul>
+            </div>
+          </section>
 
-  <section id="contact" class="info-section">
-  <div class="container">
-    <h3>Contact Us</h3>
-    <p>Have questions about our services or want to discuss a project? Drop us a message and we'll get back to you promptly.</p>
-    <div id="form-container">
-      <!-- The form button will appear here -->
-    </div>
-  </div>
-</section>
+          <section class="service animate">
+            <button class="service-header" aria-expanded="false" aria-controls="desc-network">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              Network Infrastructure
+            </button>
+            <div id="desc-network" class="service-desc" hidden>
+              <p>Routers, firewalls, security, patching — full network setup & monitoring.</p>
+              <ul>
+                <li>Network design & installation</li>
+                <li>Firewall & security setup</li>
+                <li>Wi-Fi optimization & coverage</li>
+                <li>Continuous monitoring & patching</li>
+              </ul>
+            </div>
+          </section>
 
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
-  window.formbutton = window.formbutton || function(){(formbutton.q = formbutton.q || []).push(arguments)};
-  formbutton("create", {
-    action: "https://formspree.io/f/xnnvwepq",
-    title: "How can we help?",
-    fields: [
-      { 
-        type: "email", 
-        label: "Email:", 
-        name: "email",
-        required: true,
-        placeholder: "your@email.com"
-      },
-      {
-        type: "textarea",
-        label: "Message:",
-        name: "message",
-        placeholder: "What's on your mind?",
-      },
-      { type: "submit" }
-    ],
-    styles: {
-      title: {
-        backgroundColor: "#e67300"
-      },
-      button: {
-        backgroundColor: "#e67300"
-      }
-    }
-  });
-</script>
+          <section class="service animate">
+            <button class="service-header" aria-expanded="false" aria-controls="desc-backups">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              Backups & Recovery
+            </button>
+            <div id="desc-backups" class="service-desc" hidden>
+              <p>Reliable cloud and local backups to keep your data safe and accessible.</p>
+              <ul>
+                <li>Automated cloud backups</li>
+                <li>On-premises backup solutions</li>
+                <li>Disaster recovery planning</li>
+                <li>Data restoration services</li>
+              </ul>
+            </div>
+          </section>
 
-  
-<!--
-  <section id="contact" class="info-section">
+          <section class="service animate">
+            <button class="service-header" aria-expanded="false" aria-controls="desc-managed">
+              <span class="toggle-icon" aria-hidden="true">+</span>
+              Managed IT Contracts
+            </button>
+            <div id="desc-managed" class="service-desc" hidden>
+              <p>Flexible plans tailored to your business needs.</p>
+              <ul>
+                <li>Monthly support packages</li>
+                <li>Onsite & remote assistance</li>
+                <li>Proactive system maintenance</li>
+                <li>Priority response times</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-block">
+      <div class="container">
+        <h2 class="section-title animate">About RSForge</h2>
+        <p class="about-text animate">
+          RSForge is a locally owned IT company serving Kentuckiana. Founded by lifelong locals Ethan Rowe and Jacob Scott, we believe small businesses deserve fast, personal tech support without inflated prices or long waits. We treat every client like family and bring community-first values to every job.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <h3>Contact Us</h3>
-      <p>Ready to start your project or want to learn more? Reach out to us!</p>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
--->
-  <footer>
-    <div class="container">
-      <p>© 2025 RSForge. All rights reserved.</p>
+      <p>&copy; 2025 RSForge. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Scroll animations for fade/slide in and out
+      const animated = document.querySelectorAll(".animate");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      }, { threshold: 0.15 });
+      animated.forEach(el => observer.observe(el));
+
+      // Toggle service descriptions with smooth animation
+      const serviceHeaders = document.querySelectorAll(".service-header");
+
+      function slideDown(element) {
+        element.style.removeProperty("display");
+        let display = window.getComputedStyle(element).display;
+        if (display === "none") display = "block";
+        element.style.display = display;
+
+        let height = element.scrollHeight;
+        element.style.height = "0px";
+        element.style.opacity = 0;
+        element.style.transition = "height 0.35s ease, opacity 0.35s ease";
+        requestAnimationFrame(() => {
+          element.style.height = height + "px";
+          element.style.opacity = 1;
+        });
+        element.addEventListener('transitionend', function handler(e) {
+          if (e.propertyName === 'height') {
+            element.style.height = 'auto';
+            element.style.transition = '';
+            element.removeEventListener('transitionend', handler);
+          }
+        });
+      }
+
+      function slideUp(element) {
+        element.style.height = element.scrollHeight + "px";
+        element.style.opacity = 1;
+        element.style.transition = "height 0.35s ease, opacity 0.35s ease";
+        requestAnimationFrame(() => {
+          element.style.height = "0px";
+          element.style.opacity = 0;
+        });
+        element.addEventListener('transitionend', function handler(e) {
+          if (e.propertyName === 'height') {
+            element.style.display = "none";
+            element.style.transition = '';
+            element.setAttribute("hidden", "");
+            element.removeEventListener('transitionend', handler);
+          }
+        });
+      }
+
+      serviceHeaders.forEach(header => {
+        header.addEventListener("click", () => {
+          const expanded = header.getAttribute("aria-expanded") === "true";
+
+          // Close all others
+          serviceHeaders.forEach(h => {
+            if (h !== header) {
+              h.setAttribute("aria-expanded", "false");
+              const desc = document.getElementById(h.getAttribute("aria-controls"));
+              if (desc && !desc.hasAttribute("hidden")) {
+                slideUp(desc);
+              }
+              h.querySelector(".toggle-icon").textContent = "+";
+            }
+          });
+
+          if (!expanded) {
+            header.setAttribute("aria-expanded", "true");
+            const desc = document.getElementById(header.getAttribute("aria-controls"));
+            if (desc) {
+              desc.removeAttribute("hidden");
+              slideDown(desc);
+            }
+            header.querySelector(".toggle-icon").textContent = "−";
+          } else {
+            header.setAttribute("aria-expanded", "false");
+            const desc = document.getElementById(header.getAttribute("aria-controls"));
+            if (desc) {
+              slideUp(desc);
+            }
+            header.querySelector(".toggle-icon").textContent = "+";
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
