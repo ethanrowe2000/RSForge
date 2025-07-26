@@ -10,36 +10,78 @@
   <header class="navbar">
     <div class="container">
       <a href="index.html" class="logo-link">
-        <img src="logo.png" alt="RSForge Logo" class="logo-img" />
+        <img src="rsforgelogo.png" alt="RSForge logo" class="logo-img" />
       </a>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#services">Services</a></li>
-          <li><a href="contact.html" class="visible">Contact</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="#contactHeader" class="visible">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="container" style="padding-top: 8rem;">
-    <section class="section-block">
+    <section id="contactHeader" class="section-block">
       <h2 class="section-title">Contact Us</h2>
       <p class="about-text" style="margin-bottom: 2rem;">
-        Have a question, need tech support, or want to start a service plan? Send us a message and we’ll be in touch as soon as possible.
+        Have a question, need tech support, or want to start a service plan? Send us a message and we’ll be in touch.
       </p>
 
-      <form action="https://formsubmit.co/f68c5aaa268315dbea219d2a7c44b9d0" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
-        <input type="text" name="name" required placeholder="Name" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: #f0f0f0;" />
-        <input type="email" name="email" required placeholder="Email" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: #f0f0f0;" />
-        <textarea name="message" required rows="6" placeholder="Message" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #444; background-color: #2a2a2a; color: #f0f0f0;"></textarea>
-        <button type="submit" class="btn btn-accent" style="align-self: flex-start;">Send Message</button>
-      </form>
+     <form id="contactForm" class="contact-form">
+  <div class="form-group">
+    <label for="senderCompany">Company Name</label>
+    <input type="text" id="senderCompany" name="senderCompany" />
+  </div>
+
+  <div class="form-group">
+    <label for="senderName">Your Name <span class="required">*</span></label>
+    <input type="text" id="senderName" name="senderName" required />
+  </div>
+
+  <div class="form-group">
+    <label for="senderEmail">Email Address <span class="required">*</span></label>
+    <input type="email" id="senderEmail" name="senderEmail" required />
+  </div>
+
+  <div class="form-group">
+    <label for="senderSMS">Phone Number</label>
+    <input type="text" id="senderSMS" name="senderSMS" />
+  </div>
+
+  <label for="inquiryType">What are you interested in? <span class="required">*</span></label>
+    <select id="inquiryType" name="inquiryType" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="General Question">General Question</option>
+      <option value="Technical Support">Technical Support</option>
+      <option value="Service Plan">Service Plan</option>
+      <option value="Quote Request">Quote Request</option>
+      <option value="Other">Other</option>
+</select>
+
+  <div class="form-group">
+    <label for="htmlContent">
+      Describe what we can help you with. If it's not listed above, let us know.<span class="required">*</span>
+    </label>
+    <textarea id="htmlContent" name="htmlContent" rows="5" required></textarea>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit">Submit</button>
+  </div>
+</form>
+<pre id="result" style="margin-top: 2rem;"></pre>
+
+      <pre id="result" style="margin-top: 2rem;"></pre>
     </section>
   </main>
 
   <footer class="footer">
     <p>&copy; 2025 RSForge. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
