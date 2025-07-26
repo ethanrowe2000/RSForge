@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +7,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #1a1a1a;
   color: #f0f0f0;
   line-height: 1.6;
@@ -102,19 +102,30 @@ nav a.visible {
 .btn {
   font-weight: 700;
   font-size: 1.125rem;
-  padding: 1rem 3rem;
-  color: #fff;
-  background: #ff6600;
+  padding: 1rem 2.5rem;
   border-radius: 9999px;
   text-decoration: none;
-  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.4);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  background-color: #333;
+  color: #f0f0f0;
+  box-shadow: none;
 }
 
-.btn:hover,
-.btn.visible {
-  background: #cc5200;
+.btn:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.btn-accent {
+  background-color: #ff6600;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.4);
+}
+
+.btn-accent:hover {
+  background-color: #cc5200;
   box-shadow: 0 8px 24px rgba(204, 82, 0, 0.6);
 }
 
@@ -247,7 +258,6 @@ nav a.visible {
   }
 }
 
-/* LOGO IMAGE STYLING */
 .logo-link {
   display: flex;
   align-items: center;
@@ -266,36 +276,105 @@ nav a.visible {
   transform: scale(1.05);
 }
 
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
 
-/*****************************************************/
-/* Updated Button Styles */
-.btn {
-  font-weight: 700;
-  font-size: 1.125rem;
-  padding: 1rem 2.5rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  background-color: #333;
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
   color: #f0f0f0;
-  box-shadow: none;
 }
 
-.btn:hover {
-  background-color: #444;
-  color: #fff;
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #2a2a2a;
+  color: #f0f0f0;
 }
 
-.btn-accent {
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .form-actions {
+  text-align: center;
+}
+
+.contact-form button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
   background-color: #ff6600;
-  color: #fff;
-  box-shadow: 0 6px 15px rgba(255, 102, 0, 0.4);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.btn-accent:hover {
+.contact-form button:hover {
   background-color: #cc5200;
-  box-shadow: 0 8px 24px rgba(204, 82, 0, 0.6);
 }
 
+.contact-form .required {
+  color: red;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #f0f0f0;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #ff6600;
+}
+
+.contact-form select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23f0f0f0' d='M70 90L20 40h100z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65rem;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-color: #ff6600;
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.3);
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+}
