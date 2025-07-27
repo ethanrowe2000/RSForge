@@ -278,15 +278,18 @@ nav a.visible {
   transform: scale(1.05);
 }
 
+/* Contact Form */
 .contact-form {
   display: grid;
   gap: 1.5rem;
   max-width: 600px;
+  width: 100%; /* added: full width for responsiveness */
   margin: 0 auto;
   background: #1f1f1f;
-  padding: 2rem;
+  padding: 2rem 1rem; /* adjusted horizontal padding */
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* ensure padding included in width */
 }
 
 .contact-form .form-group {
@@ -301,13 +304,16 @@ nav a.visible {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   padding: 0.75rem;
   border: 1px solid #444;
   border-radius: 8px;
   font-size: 1rem;
   background: #2a2a2a;
   color: #f0f0f0;
+  width: 100%; /* added for inputs responsiveness */
+  box-sizing: border-box; /* include padding in width */
 }
 
 .contact-form textarea {
@@ -356,17 +362,19 @@ nav a.visible {
 }
 
 .contact-form select {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: #1a1a1a;
-  color: #f0f0f0;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23f0f0f0' d='M70 90L20 40h100z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 0.75rem;
+  width: 100%; /* added */
+  box-sizing: border-box; /* added */
 }
 
 .contact-form select:focus {
@@ -488,5 +496,18 @@ nav a.visible {
     background-color: #ff6600;
     color: white;
     border-color: #ff6600;
+  }
+}
+
+/* Smaller screens below 480px tweaks */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 1rem;
   }
 }
