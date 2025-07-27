@@ -220,6 +220,18 @@ nav a.visible {
   line-height: 1.7;
 }
 
+.about-content {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 .footer {
   padding: 3rem 2rem;
   text-align: center;
